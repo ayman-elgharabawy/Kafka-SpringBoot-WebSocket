@@ -1,0 +1,64 @@
+version: '2'
+volumes:
+  postgres-data:
+ 
+services:
+# static-web
+  poc-static-web:
+    image: vodafone/static-web
+    hostname: poc-static-web
+    expose:
+    - "80"
+    ports:
+    - "80:80"
+    depends_on:
+    - poc-backend
+# Web
+  poc-web:
+    image: vodafone/uicontroller-service
+    hostname: poc-web
+    expose:
+    - "8090"
+    ports:
+    - "8090:8090"
+    links:
+    - "poc-backend"
+    - "poc-kafka"
+    - "poc-postgres"
+    depends_on:
+    - poc-backend
+    - poc-kafka
+    - poc-postgres
+# Backend
+  poc-backend:
+    image: vodafone/backend-service
+    hostname: poc-backend
+    links:
+    - "poc-kafka"
+    - "poc-postgres"
+    depends_on:
+    - poc-kafka
+    - poc-postgres
+# Apache Kafka
+  poc-kafka:
+    image: spotify/kafka
+    ports:
+    - "9092:9092"
+    - "2181:2181"
+    hostname: poc-kafka
+    expose:
+    - "9092"
+    - "2181"
+    # environment:
+    #     ADVERTISED_HOST: '0.0.0.0'
+    #     ADVERTISED_PORT: '9092'
+# Database
+  poc-postgres:
+    image: postgres
+    ports:
+    - "5432:5432"
+    hostname: poc-postgres
+    expose:
+    - "5432"
+    volumes:
+       - "postgres-data:/var/lib/postgresql/data"

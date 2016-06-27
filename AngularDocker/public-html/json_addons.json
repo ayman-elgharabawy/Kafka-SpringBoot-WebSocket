@@ -1,0 +1,340 @@
+{
+  "eCode": [
+    0
+  ],
+  "balance": [
+    {
+      "MyBalance":150
+    }
+  ],
+  "quotaAddonInquiry": [
+    {
+      "pkgid": 256,
+      "category": "MI",
+      "type": "Monthly",
+      "arName": "?????? ???? 250",
+      "enName": "Control Net 250",
+      "arDetails": " ?????? ?? 20 ???? ????",
+      "enDetails": " enjoy 20 GB",
+      "daysLeft": 10,
+      "renewalDateFormat": 1459980000000,
+      "dataQuota": [
+        {
+          "quotaName": "20 GB",
+          "type": "local",
+          "balance": 20971520,
+          "consumption": 16012150,
+          "remainder": 5999370,
+          "renewalDate": "07-Apr-2016"
+        }
+      ],
+      "price": 0.0,
+      "addonPkgDetailsDTO": [
+        {
+          "pkgid": 257,
+          "category": "MIBundles",
+          "type": "Renewable_Addon",
+          "arName": "150 ???????? ?? 5 ????",
+          "enName": "150 MB for 5 LE",
+          "arDetails": null,
+          "enDetails": null,
+          "daysLeft": 0,
+          "renewalDateFormat": null,
+          "dataQuota": [
+            {
+              "quotaName": "Add-On Quota",
+              "type": "local",
+              "balance": 153600,
+              "consumption": 0,
+              "remainder": 153600,
+              "renewalDate": "07-Apr-2016"
+            }
+          ],
+          "price": 5.0,
+          "addonPkgDetailsDTO": null,
+          "grace": false,
+          "pkgNew": false,
+          "offPeak": false,
+          "renewalDate": null
+        },
+        {
+          "pkgid": 258,
+          "category": "MIBundles2",
+          "type": "Renewable_Addon2",
+          "arName": "150 ???????? ?? 5 ????",
+          "enName": "150 MB for 5 LE",
+          "arDetails": null,
+          "enDetails": null,
+          "daysLeft": 0,
+          "renewalDateFormat": null,
+          "dataQuota": [
+            {
+              "quotaName": "Add-On Quota2",
+              "type": "local",
+              "balance": 153800,
+              "consumption": 3200,
+              "remainder": 150600,
+              "renewalDate": "06-Apr-2016"
+            }
+          ],
+          "price": 5.0,
+          "addonPkgDetailsDTO": null,
+          "grace": false,
+          "pkgNew": false,
+          "offPeak": false,
+          "renewalDate": null
+        }
+      ],
+      "grace": false,
+      "pkgNew": true,
+      "offPeak": false,
+      "renewalDate": null
+    }
+  ],
+  "eligiblePkgs": [
+    {
+      "pkgId": 65,
+      "pkgNameEn": "BlackBerry Email 2 LE / 2MB",
+      "pkgNameAr": " 2? / 2???? BlackBerry Email ",
+      "pkgType": "Daily",
+      "pkgCategory": "BB",
+      "pkgPrice": 2.0,
+      "pkgDetailsEn": "2MB every Day. Additional MBs are charged at 1 LE/MB",
+      "pkgDetailsAr": "2 ???? ???? ?? ?????. ??? ??????? ??2 ???? ????? ?? ???? ?????? ?1?/????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": false,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 1
+    },
+    {
+      "pkgId": 66,
+      "pkgNameEn": "BlackBerry Chat 2 LE / 2MB",
+      "pkgNameAr": " 2? / 2???? BlackBerry Chat ",
+      "pkgType": "Daily",
+      "pkgCategory": "BB",
+      "pkgPrice": 2.0,
+      "pkgDetailsEn": "2MB every Day. Additional MBs are charged at 1 LE/MB",
+      "pkgDetailsAr": "2 ???? ???? ?? ?????. ??? ??????? ??2 ???? ????? ?? ???? ?????? ?1?/????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": false,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 1
+    },
+    {
+      "pkgId": 61,
+      "pkgNameEn": "BlackBerry Unlimited 5 LE / 5MB",
+      "pkgNameAr": " 5? / 5???? BlackBerry Unlimited ",
+      "pkgType": "Daily",
+      "pkgCategory": "BB",
+      "pkgPrice": 5.0,
+      "pkgDetailsEn": "5MB every Day. After consuming the quota, the speed decreases",
+      "pkgDetailsAr": "5 ???? ???? ?? ?????. ??? ??????? ??5 ???? ??? ??????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": false,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 1
+    },
+    {
+      "pkgId": 252,
+      "pkgNameEn": "Control Net 25",
+      "pkgNameAr": "?????? ???? 25",
+      "pkgType": "Monthly",
+      "pkgCategory": "MI",
+      "pkgPrice": 25.0,
+      "pkgDetailsEn": " enjoy 1.25 GB",
+      "pkgDetailsAr": " ?????? ?? 1.25 ???? ????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": true,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 2
+    },
+    {
+      "pkgId": 70,
+      "pkgNameEn": "BlackBerry Email 50 LE / 100 MB",
+      "pkgNameAr": " 50? / 100???? BlackBerry Email",
+      "pkgType": "Monthly",
+      "pkgCategory": "BB",
+      "pkgPrice": 50.0,
+      "pkgDetailsEn": "100 MB every Month. Additional MBs are charged at 1 LE/MB",
+      "pkgDetailsAr": "100 ???? ???? ?? ?????. ??? ??????? ??100 ???? ????? ?? ???? ?????? ?1?/????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": false,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 1
+    },
+    {
+      "pkgId": 71,
+      "pkgNameEn": "BlackBerry Chat 50 LE / 100 MB",
+      "pkgNameAr": " 50?/ 100???? BlackBerry Chat",
+      "pkgType": "Monthly",
+      "pkgCategory": "BB",
+      "pkgPrice": 50.0,
+      "pkgDetailsEn": "100 MB every Month. Additional MBs are charged at 1 LE/MB",
+      "pkgDetailsAr": "100 ???? ???? ?? ?????. ??? ??????? ??100 ???? ????? ?? ???? ?????? ?1?/????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": false,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 1
+    },
+    {
+      "pkgId": 253,
+      "pkgNameEn": "Control Net 60",
+      "pkgNameAr": "?????? ???? 60",
+      "pkgType": "Monthly",
+      "pkgCategory": "MI",
+      "pkgPrice": 60.0,
+      "pkgDetailsEn": " enjoy 3.5 GB",
+      "pkgDetailsAr": " ?????? ?? 3.5 ???? ????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": true,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 2
+    },
+    {
+      "pkgId": 68,
+      "pkgNameEn": "BlackBerry Unlimited 100 LE / 200MB",
+      "pkgNameAr": "100? / 200???? BlackBerry Unlimited",
+      "pkgType": "Monthly",
+      "pkgCategory": "BB",
+      "pkgPrice": 100.0,
+      "pkgDetailsEn": "200MB every Month. After consuming the quota ,the speed decreases",
+      "pkgDetailsAr": "200 ???? ???? ?? ?????. ??? ??????? ??200 ???? ??? ??????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": false,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 1
+    },
+    {
+      "pkgId": 254,
+      "pkgNameEn": "Control Net 100",
+      "pkgNameAr": "?????? ???? 100",
+      "pkgType": "Monthly",
+      "pkgCategory": "MI",
+      "pkgPrice": 100.0,
+      "pkgDetailsEn": " enjoy 7 GB",
+      "pkgDetailsAr": " ?????? ?? 7 ???? ????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": true,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 2
+    },
+    {
+      "pkgId": 255,
+      "pkgNameEn": "Control Net 150",
+      "pkgNameAr": "?????? ???? 150",
+      "pkgType": "Monthly",
+      "pkgCategory": "MI",
+      "pkgPrice": 150.0,
+      "pkgDetailsEn": " enjoy 12 GB",
+      "pkgDetailsAr": " ?????? ?? 12 ???? ????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": true,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 2
+    },
+    {
+      "pkgId": 256,
+      "pkgNameEn": "Control Net 250",
+      "pkgNameAr": "?????? ???? 250",
+      "pkgType": "Monthly",
+      "pkgCategory": "MI",
+      "pkgPrice": 250.0,
+      "pkgDetailsEn": " enjoy 20 GB",
+      "pkgDetailsAr": " ?????? ?? 20 ???? ????",
+      "pkgFlag": "Y",
+      "custType": "E",
+      "pkgNew": true,
+      "pkgActiveFlag": true,
+      "pkgGroupId": 2
+    }
+  ],
+  "eligibleAddons": [
+    {
+      "addonId": 298,
+      "addonNameEn": "10 EGP for speed 32kb/s",
+      "addonNameAr": "???? ??? ????? 10 ???? ????? 32 ????????/?????",
+      "addonPrice": 10.0,
+      "pkgId": 88,
+      "addonType": "Renewable_Throttling",
+      "category": "Th",
+      "renewalFlag": null,
+      "renewalId": null
+    },
+    {
+      "addonId": 257,
+      "addonNameEn": "150 MB for 5 LE",
+      "addonNameAr": "150 ???????? ?? 5 ????",
+      "addonPrice": 5.0,
+      "pkgId": 99,
+      "addonType": "Renewable_Addon",
+      "category": "Q-150",
+      "renewalFlag": null,
+      "renewalId": null
+    },
+    {
+      "addonId": 258,
+      "addonNameEn": "1 GB for 20 LE",
+      "addonNameAr": "1 ???????? ?? 20 ????",
+      "addonPrice": 20.0,
+      "pkgId": 100,
+      "addonType": "Renewable_Addon",
+      "category": "Q-1",
+      "renewalFlag": null,
+      "renewalId": null
+    },
+    {
+      "addonId": 260,
+      "addonNameEn": "150 MB for 5 LE",
+      "addonNameAr": "150 ???????? ?? 5 ????",
+      "addonPrice": 5.0,
+      "pkgId": 99,
+      "addonType": "OnDemand_Addon",
+      "category": "Q-150",
+      "renewalFlag": "Y",
+      "renewalId": "257"
+    },
+    {
+      "addonId": 261,
+      "addonNameEn": "1 GB for 20 LE",
+      "addonNameAr": "1 ???????? ?? 20 ????",
+      "addonPrice": 20.0,
+      "pkgId": 100,
+      "addonType": "OnDemand_Addon",
+      "category": "Q-1",
+      "renewalFlag": "Y",
+      "renewalId": "258"
+    },
+    {
+      "addonId": 262,
+      "addonNameEn": "10 EGP for speed 32kb/s",
+      "addonNameAr": "???? ??? ????? 10 ???? ????? 32 ????????/?????",
+      "addonPrice": 10.0,
+      "pkgId": 88,
+      "addonType": "OnDemand_Throttling",
+      "category": "Th",
+      "renewalFlag": "Y",
+      "renewalId": "259"
+    },
+    {
+      "addonId": 263,
+      "addonNameEn": "Follow up with 25 PT for every MB",
+      "addonNameAr": "??? ????????? ?? 25 ??? ??? ????????",
+      "addonPrice": 0.25,
+      "pkgId": 0,
+      "addonType": "Follow up",
+      "category": "FU",
+      "renewalFlag": "N",
+      "renewalId": null
+    }
+  ]
+}

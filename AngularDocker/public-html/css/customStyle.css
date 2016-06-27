@@ -1,0 +1,123 @@
+/*//-----------------------------Login_Style-----------------------------------*/
+
+.ErrorMsg{
+    display: none;
+    text-align: center;
+}
+.mar-top
+{
+    margin-top: 15%;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.name ,.password{
+    margin-top: 25px;
+    border: solid 1px gray;
+    box-shadow: none;
+}
+.loginBtn{
+    margin-top: 25px;
+    box-shadow: none;
+}
+input[placeholder] {
+    text-align: center;
+}
+
+/*//-----------------------------MainPageStyle_Style-----------------------------------*/
+.progress.active .progress-bar{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.progress-html{
+    -webkit-animation-name: progress-html;
+    animation-name: progress-html;
+    -webkit-animation-delay: .7s;
+    animation-delay: .7s;
+}
+
+@-webkit-keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+@-moz-keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+@keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+/*-------------------------------------------------------------------------*/
+.vodafoneIcon{
+    float: left;
+}
+
+.ADSLFooter {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+}
+.logo-container {
+    position: absolute;
+    left: -19px;
+    top: -1px;
+}
+.logo-container:before {
+    position: absolute !important;
+    top: 158px !important;
+    left: -468px;
+    z-index: -1;
+    content: '';
+    width: 763px;
+    height: 414px;
+    display: block;
+    position: absolute;
+    background-color: #e60000;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    border-radius: 0 0 35px 0;
+}
+
+.logo-container:after {
+    content: '';
+    width: 1983px;
+    height: 624px;
+    display: block;
+    position: absolute;
+    background-color: #e60000;
+    top: -54px;
+    left: -2440px;
+    border-radius: 0;
+}
+
+.ADSLHeader {
+    background-color: #e60000;
+    border-radius: 5px;
+    height: 60px;
+    margin-top: 30px;
+    padding: 16px;
+    width: 100%;
+}
+
+.ADSLHeader p {
+    float: left;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.ADSLcopyright{
+    padding-top: 29px;
+}
+.loginicon{
+    padding-top: 37px;
+}
+input.pw {
+    -webkit-text-security: disc;
+}

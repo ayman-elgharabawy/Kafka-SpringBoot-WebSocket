@@ -1,0 +1,398 @@
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Unified Data Bundle</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{adsText}}</h1>
+    </div>
+  </div>
+  <!--Header-->
+  <!--main--> 
+  <!--mainInfo-->
+  <div class="row">
+    <div class="col-sm-3 col-xs-12">
+      <div class="col-xs-12 Border">
+        <div class="col-xs-12">
+          <h3>USB Sim Number:</h3>
+          <!--<h5>Deducted after recharge your balance.</h5>-->
+          <div class="USB_Sim_Number_Icon">&nbsp;</div>
+        </div>
+        <div class="col-xs-12">
+          <h3> {{mobileInternet.usbMsisdn}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 col-xs-12">
+      <div class="col-xs-12 Border">
+        <div class="col-xs-12">
+          <h3>Your Plan:</h3>
+          <h5><span>{{mobileInternet.ratePlan}}</span></h5>
+          <div class="Your_Plan_Icon">&nbsp;</div>
+        </div>
+        <div class="col-xs-12 Button">
+          <button href="#a" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Conformation">Deactivate</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 col-xs-12">
+      <div class="col-xs-12 Border">
+        <div class="col-xs-12">
+          <h3>My Balance:</h3>
+          <h2><span>{{mobileInternet.balance}}</span><span>LE</span></h2>
+          <!-- <h2><span ng-bind="GetValueInGB(AllMIData.balance[0].MyBalance)"></span><span>LE</span></h2> -->
+          <div class="My_Balance_Icon">&nbsp;</div>
+        </div>
+        <div class="col-xs-12 Button">
+          <button href="#a" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Recharge">Recharge Balance</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 col-xs-12">
+      <div class="col-xs-12 Border">
+        <div class="col-xs-12">
+          <h3>Salafny Amount:</h3>
+          <h2>{{mobileInternet.sallefny}}<span>LE</span></h2>
+          <div class="Salafny_Amount_Icon">&nbsp;</div>
+        </div>
+        <div class="col-xs-12 Button">
+          <button href="#a" class="btn btn-info btn-block" data-toggle="modal" data-target="#Conformation">Salafny</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--mainInfo--> 
+  <!--mainTaps-->
+  <!--mainTaps--> 
+  
+  
+  <!-----------------------------------------------------Mobile InterNet---------------------------------------------------------------------->
+  <div class="Show_Mobile_Internet_Bundle">
+    <!--mainBar-->
+  <div class="row">
+    <div class="col-sm-12 col-xs-12">
+      <h2 class="text_align_Center"> Total Remaining Qouta <span ng-bind="GetValueInGB(AllMIData.quotaAddonInquiry[0].dataQuota[0].remainder)"></span>  <span ng-bind="GetDisplayedUnit(AllMIData.quotaAddonInquiry[0].dataQuota[0].remainder)">GB</span> </h2>
+      <h3 class="text_align_Center"> Main Quota <span ng-bind="GetValueInGB(AllMIData.quotaAddonInquiry[0].dataQuota[0].balance)"></span> <span ng-bind="GetDisplayedUnit(AllMIData.quotaAddonInquiry[0].dataQuota[0].remainder)"></span> </h3>
+      <h4 class="text_align_Center"><span class="UDB_Total_Remaining_Qouta_TXT_Description_Icon"> &nbsp; </span> Renewal Date: <span>{{AllMIData.quotaAddonInquiry[0].dataQuota[0].renewalDate}} / {{AllMIData.quotaAddonInquiry[0].daysLeft}} Days </span>left for your renewal </h4>
+    </div>
+    <div class="col-sm-12 col-xs-12">
+      <div class="progress-container">
+        <div class="progress-bar_ruler"></div>
+        <div class="progress-bar_leftAndright_TXT">
+          <div class="progress-bar_left_TXT">
+            <span ng-bind="GetValueInGB(mobileInternet.consumedQouta)"></span>
+            <span ng-bind="GetDisplayedUnit(mobileInternet.consumedQouta)" ></span>
+            <div> Consumed </div>
+          </div>
+          <div class="progress-bar_right_TXT">
+            <span ng-bind="GetValueInGB(mobileInternet.totalQouta)"></span>
+            <span ng-bind="GetDisplayedUnit(mobileInternet.totalQouta)" ></span>
+            <div> Remaining </div>
+          </div>
+        </div>
+        <div class="progress active">
+          <div class="progress-bar progress-bar-success progress-html" id="testbar" ng-style="setprogerress('testbar',(mobileInternet.consumedQouta/mobileInternet.totalQouta)*100)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--mainBar--> 
+  <!--mainBar Add-ons-->
+  <div class="row Show_Add_On">
+    <div class="col-sm-6 col-xs-12" ng-repeat="x in AllMIData.quotaAddonInquiry[0].addonPkgDetailsDTO" >
+      <div class="col-xs-12 Border">
+        <div class="col-xs-12">
+          <h2> {{x.dataQuota[0].quotaName}} </h2>
+          <h4> Total Add-On Time based is <span ng-bind="GetValueInGB(x.dataQuota[0].balance)"></span> <span ng-bind="GetDisplayedUnit(x.dataQuota[0].balance)"></span> </h4>
+          <h5><span class="UDB_Total_Remaining_Qouta_TXT_Description_Icon"> &nbsp; </span> Renewal Date: <span>{{x.dataQuota[0].renewalDate}} / {{x.daysLeft}} Days </span>left </h5>
+          <div class="UDB_Quota_Icon Right_Icon"></div>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <div class="progress-container">
+            <div class="progress-bar_ruler"></div>
+            <div class="progress-bar_leftAndright_TXT">
+              <div class="progress-bar_left_TXT">
+                <span ng-bind="GetValueInGB(x.dataQuota[0].consumption)"></span>
+                <span ng-bind="GetDisplayedUnit(x.dataQuota[0].consumption)" ></span>
+
+                <div> Consumed </div>
+              </div>
+              <div class="progress-bar_right_TXT">
+                <span ng-bind="GetValueInGB(x.dataQuota[0].remainder)"></span>
+                <span ng-bind="GetDisplayedUnit(x.dataQuota[0].remainder)" ></span>
+                <div> Remaining </div>
+              </div>
+            </div>
+            <div class="progress active">
+              <div class="progress-bar progress-bar-success progress-html" ng-style="setprogerress('testbar'+$index ,((GetValueInGB(x.dataQuota[0].balance)- (GetValueInGB(x.dataQuota[0].remainder)))/(GetValueInGB((AllMIData.quotaAddonInquiry[0].dataQuota[0].balance))))*100)" id="testbar{{$index}}"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-xs-12 ">
+          <button href="#a" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Conformation">Deactivate Bundle</button>
+        </div>
+        <div class="col-sm-4 col-xs-12 ">
+          <button href="#a" class="btn btn-info btn-block Repurchase_Action">Repurchase</button>
+        </div>
+        <div class="col-sm-3 col-xs-12">
+          <button href="#a" class="btn btn-default btn-block" data-toggle="modal" data-target="#Conformation">HUB</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <!--mainBar Add-ons--> 
+    
+  <!--mainAddSpace-->
+  <!--mainAddSpace--> 
+  <!--mainSlick-->
+
+  <!--mainSlick--> 
+  <!--mainRateplan-->
+
+  <!--mainRateplan--> 
+  </div>
+  
+  
+  <!-----------------------------------------------------Mobile InterNet---------------------------------------------------------------------->
+  
+  <!-----------------------------------------------------Time Based--------------------------------------------------------------------------->
+  
+
+  <!-----------------------------------------------------Time Based--------------------------------------------------------------------------->
+  
+  
+    <!-----------------------------------------------------BlackBerry--------------------------------------------------------------------------->
+ 
+
+  <!-----------------------------------------------------BlackBerry--------------------------------------------------------------------------->
+  
+  
+
+
+  <!--Start Overiay--> 
+  <!--ConformationMSG Overiay-->
+  <div class="modal fade in" id="Conformation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4>Conformation...</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="Show_main_MSG">
+              <div class="alert alert-success"> <i class=""></i> <strong> Conformation!!</strong>
+                <div class="alert-content First_step_Conformation">
+                  <p> Are you sure to confirm?</p>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block Show_Success" >Confirm</button>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-info btn-block" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <div class="Show_Success_MSG">
+              <div class="alert alert-success"> <i class="alert-icon"></i> <strong> Title</strong> <a class="alert-link">Link</a>
+                <div class="alert-content">
+                  <p> Lorem Ipsum is simply dummy </p>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s </p>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+            <div class="Show_Wrong_MSG">
+              <div class="alert alert-warning"> <i class="alert-icon"></i> <strong> Title</strong> <a class="alert-link">Link</a>
+                <div class="alert-content">
+                  <p> Lorem Ipsum is simply dummy </p>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the hr
+                    industry's standard dummy text ever since the 1500s </p>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+            <div class="Show_Error_MSG">
+              <div class="alert alert-danger"> <strong> Title</strong> <a class="alert-link">Link</a>
+                <p> Lorem Ipsum is simply dummy </p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s </p>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-info btn-block" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ConformationMSG Overiay--> 
+  <!--recharge Overiay-->
+  <div class="modal fade in" id="Recharge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4>Conformation...</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="Show_main_MSG">
+              <div class="col-xs-12">
+                <div class="col-sm-4 col-xs-12">
+                  <div class="form-group">
+                    <label>Enter Mobile Number:</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="col-xs-12 Captcha"> <img src="img/stickyImg.png" alt="" /> <img src="img/refreshbtn.gif" alt="" /> </div>
+                <div class="col-sm-4 col-xs-12">
+                  <div class="form-group">
+                    <label>Enter your Captcha Number:</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block Show_Success" >Recharge</button>
+              </div>
+            </div>
+            <div class="Show_Success_MSG">
+              <div class="alert alert-success"> <i class="alert-icon"></i> <strong> Title</strong> <a class="alert-link">Link</a>
+                <div class="alert-content">
+                  <p> Lorem Ipsum is simply dummy </p>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s </p>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+            <div class="Show_Wrong_MSG">
+              <div class="alert alert-warning"> <i class="alert-icon"></i> <strong> Title</strong> <a class="alert-link">Link</a>
+                <div class="alert-content">
+                  <p> Lorem Ipsum is simply dummy </p>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the hr
+                    industry's standard dummy text ever since the 1500s </p>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+            <div class="Show_Error_MSG">
+              <div class="alert alert-danger"> <strong> Title</strong> <a class="alert-link">Link</a>
+                <p> Lorem Ipsum is simply dummy </p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s </p>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-info btn-block" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--recharge Overiay--> 
+  <!--AddSpace Overiay-->
+  <div class="modal fade in" id="AddSpace" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4>Offer of the day...</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="AddSpace_Overlay">
+            	<div class="col-sm-8">
+              <h2>New Data bundle</h2>
+              <h5>New Data bundlesimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</h5>
+              </div>
+              <div class="col-sm-4">
+              	<img src="img/Untitled-1_07.png" alt="" />
+              </div>
+              <div class="col-md-2">
+              	<button type="button" class="btn btn-primary btn-block Show_Success">Submit</button>
+              </div>
+              <div class="col-md-2">
+              	<button type="button" class="btn btn-info btn-block" data-dismiss="modal">close</button>
+              </div>
+            </div>
+            <div class="Show_Success_MSG">
+              <div class="alert alert-success"> <i class="alert-icon"></i> <strong> Title</strong> <a class="alert-link">Link</a>
+                <div class="alert-content">
+                  <p> Lorem Ipsum is simply dummy </p>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s </p>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+            <div class="Show_Wrong_MSG">
+              <div class="alert alert-warning"> <i class="alert-icon"></i> <strong> Title</strong> <a class="alert-link">Link</a>
+                <div class="alert-content">
+                  <p> Lorem Ipsum is simply dummy </p>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the hr
+                    industry's standard dummy text ever since the 1500s </p>
+                </div>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+            <div class="Show_Error_MSG">
+              <div class="alert alert-danger"> <strong> Title</strong> <a class="alert-link">Link</a>
+                <p> Lorem Ipsum is simply dummy </p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s </p>
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button type="button" class="btn btn-info btn-block" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--AddSpace Overiay--> 
+  <!--Loading Overiay-->
+  <div class="modal fade in" id="Loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="Loading"> <img src="img/Untitled-1-copy.gif" alt=""/> </div>
+  </div>
+  <!--Loading Overiay--> 
+  <!--End Overiay--> 
+  <!--main--> 
