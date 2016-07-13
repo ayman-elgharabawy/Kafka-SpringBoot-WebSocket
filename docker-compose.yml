@@ -5,7 +5,7 @@ volumes:
 services:
 # static-web
   poc-static-web:
-    image: static-web
+    image: microsvc-angular/static-web
     hostname: poc-static-web
     expose:
     - "80"
@@ -15,7 +15,7 @@ services:
     - poc-backend
 # Web
   poc-web:
-    image: uicontroller-service
+    image: microsvc-angular/uicontroller-service
     hostname: poc-web
     expose:
     - "8090"
@@ -31,7 +31,7 @@ services:
     - poc-postgres
 # Backend
   poc-backend:
-    image: backend-service
+    image: microsvc-angular/backend-service
     hostname: poc-backend
     links:
     - "poc-kafka"
