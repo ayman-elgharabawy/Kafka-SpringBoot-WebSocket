@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.vodafone</groupId>
+	<groupId>poc.microsvc-angular</groupId>
 	<artifactId>uicontroller-service</artifactId>
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
@@ -34,7 +34,7 @@
 			<artifactId>spring-messaging</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.vodafone</groupId>
+			<groupId>poc.microsvc-angular</groupId>
 			<artifactId>microservice-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -51,7 +51,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.9</version>
 				<configuration>
-					<imageName>vodafone/${project.name}</imageName>
+					<imageName>microsvc-angular/${project.name}</imageName>
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
 					<skipDockerBuild>false</skipDockerBuild>
 					<resources>
