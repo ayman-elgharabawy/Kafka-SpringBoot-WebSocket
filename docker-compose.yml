@@ -5,7 +5,7 @@ volumes:
 services:
 # static-web
   poc-static-web:
-    image: vodafone/static-web
+    image: static-web
     hostname: poc-static-web
     expose:
     - "80"
@@ -15,7 +15,7 @@ services:
     - poc-backend
 # Web
   poc-web:
-    image: vodafone/uicontroller-service
+    image: uicontroller-service
     hostname: poc-web
     expose:
     - "8090"
@@ -31,7 +31,7 @@ services:
     - poc-postgres
 # Backend
   poc-backend:
-    image: vodafone/backend-service
+    image: backend-service
     hostname: poc-backend
     links:
     - "poc-kafka"
