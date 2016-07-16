@@ -1,0 +1,662 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+	font-family: sans-serif; /* 1 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+
+body {
+	margin: 0;
+}
+
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b, strong {
+	font-weight: bold;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+	border: 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button, input, optgroup, select, textarea {
+	color: inherit; /* 1 */
+	font: inherit; /* 2 */
+	margin: 0; /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+	overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button, select {
+	text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button, html input[type="button"], /* 1 */ input[type="reset"], input[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer; /* 3 */
+}
+
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+ border: 0;
+ padding: 0;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+	line-height: normal;
+}
+
+/*============================================End of Normalize CSS============================================*/
+
+/*============================================Applying custom col/row padding============================================*/
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	padding-left: 10px!important;
+	padding-right: 10px!important;
+}
+.row {
+	margin-left: -10px!important;
+	margin-right: -10px!important;
+}
+.container {
+	padding-right: 10px!important;
+	padding-left: 10px!important;
+}
+/*============================================Applying Fonts============================================*/
+body {
+	font: 400 14px/1.3 "Arial", sans-serif;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+/*============================================Base features============================================*/
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+/*============================================All Heading styling============================================*/
+h1, .h1 {
+	font: 45px "Tahoma";
+	margin: 10px 0;
+	color: #e60000;
+}
+h2, .h2 {
+	font: 30px "Tahoma";
+	margin: 10px 0;
+}
+h3, .h3 {
+	font-size: 20px;
+	margin: 10px 0;
+}
+h4, .h4 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+h5, .h5 {
+	font-size: 14px;
+	margin: 10px 0;
+}
+
+/*============================================Styling Alerts============================================*/
+.alert .alert-icon, input[type="checkbox"] + label span, input[type="radio"] + label span, .progress-bar_ruler {
+	background-image: url("../img/icons.png");
+}
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	color: #333;
+}
+.alert .alert-icon {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 10px;
+}
+.alert h4 {
+	margin-top: 0;
+	color: inherit;
+}
+.alert .alert-link {
+	font-weight: bold;
+	cursor: pointer;
+	color: #333;
+}
+.alert .alert-content {
+	padding-left: 45px;
+}
+.alert > p, .alert > ul {
+	margin-bottom: 0;
+}
+.alert > p + p {
+	margin-top: 5px;
+}
+
+.alert-danger {
+	background-color: #fef0f0;
+	border-color: #e60000;
+}
+.alert-danger .alert-icon {
+	background-position: -1671px 0;
+}
+.alert-danger hr {
+	border-top-color: #e4b9c0;
+}
+/*============================================Input Styling============================================*/
+.form-control {
+	display: block;
+	width: 100%;
+	height: 36px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background: #fff;
+	border: 0;
+	border-radius: 3px;
+	-webkit-appearance: none;
+	box-shadow: 0 1px 2px rgba(50, 50, 50, 0.75) inset;
+	/* Animation*/
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+	outline: none;
+	box-shadow: inset 0 0 0 3px #428600, 0 1px 2px rgba(50, 50, 50, 0.75) inset;
+}
+.form-control::-moz-placeholder {
+ color: #999;
+ opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+ color: #999;
+}
+.form-control::-webkit-input-placeholder {
+ color: #999;
+}
+
+
+/*============================================Button Styling============================================*/
+.btn {
+	display: inline-block;
+	padding: 11px 20px 9px;
+	margin-bottom: 0;
+	font: 700 14px "Arial";
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 0;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(50, 50, 50, 0.75);
+	outline: 0;
+}
+.btn:hover, .btn:focus, .btn.focus {
+	color: #333;
+	text-decoration: none;
+}
+.btn:active, .btn.active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: 0 1px 2px rgba(50, 50, 50, 0.75) inset;
+	box-shadow: 0 1px 2px rgba(50, 50, 50, 0.75) inset;
+}
+
+.btn-info {
+	color: #fff;
+	background-color: #3d3d3d;
+}
+.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+	color: #fff;
+	background-color: #000000;
+}
+.btn-info:active, .btn-info.active {
+	background-color: #3d3d3d;
+}
+/*============================================Progress Bar============================================*/
+.progress {
+	height: 45px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	background-color: #f4f4f4;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.progress-container {
+	position: relative;
+}
+.progress.active .progress-bar {
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+.progress-bar_leftAndright_TXT {
+	width: 100%;
+	position: absolute;
+	padding: 4px 1%;
+	height: 100%;
+	color: #333;
+}
+.progress-bar_right_TXT, .progress-bar_left_TXT {
+	float: left;
+	text-align: left;
+	direction: ltr;
+	font: bold 20px "Tahoma";
+}
+.progress-bar_right_TXT > div, .progress-bar_left_TXT div {
+	font: normal 16px "Tahoma";
+	line-height: 0.5;
+}
+.progress-bar_right_TXT {
+	float: right;
+	text-align: right;
+}
+.progress-bar_ruler {
+	width: 100%;
+	height: 11px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-position: 0 -87px;
+}
+.progress-bar-success {
+	background-color: #a8b223;
+}
+.progress-bar-warning {
+	background-color: #eb9700;
+}
+.progress-bar-danger {
+	background-color: #e60000;
+}
+/*============================================Pagination============================================*/
+.pagination > li > a, .pagination > li > span {
+	position: relative;
+	float: left;
+	padding: 9px 12px;
+	line-height: 1.42857143;
+	color: #333;
+	text-decoration: none;
+	background-color: #fff;
+	border: 0;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(50,50,50,0.75);
+	margin: 10px 5px;
+}
+.pagination > li > a:active, .pagination > li > span:active {
+	color: #fff;
+	background-color: #666;
+	box-shadow: 0 1px 2px rgba(50,50,50,0.75) inset;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+	margin: 10px 2px 10px 0;
+}
+/*Adding custom background image for arrows*/
+.pagination-left-old-custom, .pagination-right-new-custom, .pagination-left-step-custom, .pagination-right-step-custom {
+	background: url("../img/icons.png") no-repeat -3298px 1px;
+	width: 14px;
+	height: 16px;
+}
+.pagination-right-new-custom {
+	background-position: -3318px 1px;
+}
+.pagination-left-step-custom {
+	background-position: -3269px 1px;
+}
+.pagination-right-step-custom {
+	background-position: -3283px 1px;
+}
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+	margin: 10px 0 10px 2px;
+}
+.pagination > li > a:hover, .pagination > li > span:hover {
+	color: #333;
+	background-color: #f4f4f4;
+}
+.pagination-page-num a:focus, .pagination-page-num span:focus {
+	position: relative;
+	float: left;
+	padding: 9px 12px;
+	line-height: 1.42857143;
+	color: #fff;
+	text-decoration: none;
+	background-color: #666;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(50,50,50,0.75) inset;
+	margin: 10px 5px;
+}
+.pagination-active-page a:focus, .pagination-active-page span:focus, .pagination-active-page a:hover, .pagination-active-page span:hover {
+	color: #fff!important;
+	background-color: #666!important;
+}
+/*============================================Custom Modal Sizing============================================*/
+@media (min-width: 768px) {
+.modal-dialog {
+	width: 740px;
+}
+}
+/*============================================Start Icon============================================*/
+.USB_Sim_Number_Icon, .My_Balance_Icon, .Salafny_Amount_Icon, .Your_Plan_Icon, .Loading_Bar_Rulers, .UDB_Total_Remaining_Qouta_TXT_Description_Icon, .UDB_Buy_Add_Ons_Carousel_Arrows_Left, .UDB_Buy_Add_Ons_Carousel_Arrows_Right, .UDB_Quota_Icon, .UDB_Throttling_Icon, .UDB_Time_based_Icon, .UDB_Content_Icon, .UDB_Follow_Up_Icon, .UDB_Back_Icon, .UDB_Change_and_Buy_your_Plan_TXT_Description_Icon, .Plan_Icon, .Active_Plan_Icon, .USB_Sim_Number_Icon, .My_Balance_Icon, .Salafny_Amount_Icon, .Your_Plan_Icon, .Recharge_Balance_Icon, .UDB_Buy_Add_Ons_Category_Arrow_H, .Salafny_Icon, .Recharge_Sucess_Icon, .Grace_Icon, .Content_Youtube_Icon, .Content_Facebook_Icon, .Content_Instagram_Icon, .Content_Entertainment_icon, .Content_Soundcloud_Icon, .Content_Anghami_Icon, .Content_Mazika_Icon, .Content_Music_icon, .Content_Youm7_Icon, .Content_Yallakora_Icon, .Content_Vetogate_Icon, .Content_News_icon, .Grace_Icon {
+	background-image: url(../img/UDB_Icon.png);
+	background-repeat: no-repeat;
+}
+.USB_Sim_Number_Icon, .My_Balance_Icon, .Salafny_Amount_Icon, .Your_Plan_Icon {
+	width: 38px;
+	height: 32px;
+	float: right;
+	position: absolute;
+	right: 0%;
+	top: 10%;
+}
+.USB_Sim_Number_Icon {
+	background-position: 0 0;
+}
+.Your_Plan_Icon {
+	background-position: -114px 0;
+}
+.My_Balance_Icon {
+	background-position: -38px 0;
+}
+.Salafny_Amount_Icon {
+	background-position: -76px 0;
+}
+.UDB_Total_Remaining_Qouta_TXT_Description_Icon, .UDB_Change_and_Buy_your_Plan_TXT_Description_Icon {
+	width: 17px;
+	height: 17px;
+	float: left;
+	background-position: -161px -11px;
+	margin-right: 1%;
+}
+.UDB_Buy_Add_Ons_Carousel_Arrows_Left, .UDB_Buy_Add_Ons_Carousel_Arrows_Right {
+	width: 39px;
+	height: 113px;
+	margin-top: 170px;
+}
+.UDB_Buy_Add_Ons_Carousel_Arrows_Left {
+	float: left;
+	background-position: -135px -142px;
+}
+.UDB_Buy_Add_Ons_Carousel_Arrows_Right {
+	float: right;
+	background-position: -174px -142px;
+}
+.UDB_Buy_Add_Ons_Category_Arrow_H, .UDB_SmartPhone_Arrow_H {
+	display: none;
+}
+.UDB_Quota_Icon, .UDB_Throttling_Icon, .UDB_Time_based_Icon, .UDB_Content_Icon, .UDB_Follow_Up_Icon, .deactivate_Quota_Icon, .deactivate_Throttling_Icon, .deactivate_Time_based_Icon, .deactivate_Content_Icon, .deactivate_Follow_Up_Icon {
+	width: 65px;
+	height: 55px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.UDB_Quota_Icon {
+	background-position: 0 -32px;
+}
+.UDB_Throttling_Icon {
+	background-position: -130px -32px;
+}
+.UDB_Time_based_Icon {
+	background-position: -195px -32px;
+}
+.UDB_Content_Icon {
+	background-position: -65px -32px;
+}
+.UDB_Follow_Up_Icon {
+	background-position: -294px 0;
+}
+.UDB_Back_Icon {
+	background-position: -218px -11px;
+	width: 10px;
+	height: 20px;
+	position: absolute;
+	top: 3px;
+	left: 50px;
+}
+.Content_Youtube_Icon, .Content_Facebook_Icon, .Content_Instagram_Icon, .Content_Soundcloud_Icon, .Content_Anghami_Icon, .Content_Mazika_Icon, .Content_Youm7_Icon, .Content_Yallakora_Icon, .Content_Vetogate_Icon {
+	float: left;
+	width: 28px;
+	height: 29px;
+	margin-top: 2%;
+	margin-right: 5%;
+}
+.Content_Youtube_Icon {
+	background-position: -260px -189px;
+}
+.Content_Facebook_Icon {
+	background-position: -260px -160px;
+}
+.Content_Instagram_Icon {
+	background-position: -260px -218px;
+}
+.Plan_Icon {
+	float: right;
+	width: 68px;
+	height: 63px;
+	background-position: -68px -142px;
+	margin-top: 4%;
+}
+.Active_Plan_Icon {
+	float: right;
+	width: 68px;
+	height: 63px;
+	background-position: 0 -142px;
+}
+.Grace_Icon {
+	margin: 0px auto;
+	width: 32px;
+	height: 32px;
+	background-position: -261px -128px;
+}
+/*============================================End Icon============================================*/
+.container{
+  margin-bottom: 10%;	
+}
+.Border {
+	border: 2px solid #f4f4f4;
+	min-height: 165px;
+	margin-top: 5%;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+.Border > .Button {
+	position: absolute;
+	bottom: 8%;
+}
+.border_Bottom{
+	padding-bottom: 4%;	
+}
+.Right_Icon {
+	position: absolute;
+	right: 0%;
+	top: 0%;
+}
+.First_step_Conformation {
+	padding-left: 0px !important;
+}
+.text_align_Center {
+	text-align: center;
+}
+
+.First_Tap {
+	border-bottom-left-radius: 5px;
+	border-right: 1px solid #ccc;
+}
+.Sec_Tap {
+	border-right: 1px solid #ccc;
+}
+.Third_Tap {
+	border-bottom-right-radius: 5px;
+}
+.UDB_Buy_Add_Ons_Main_Carousel {
+	width: 90%;
+	margin: 0 auto;
+}
+.UDB_Buy_Add_Ons_Category {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 6px;
+	position: relative;
+	min-height: 470px !important;
+	width: 204px !important;
+}
+.UDB_Back_action {
+	display: none;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.UDB_Buy_Add_Ons_Category_Options , .OnDemand_Renewal {
+	position: absolute;
+	bottom: 2%;
+}
+.OnDemand_Renewal {
+	display: none;
+}
+.fm-radio_Div {
+	float: left;
+	width: 90%;
+	margin-left: 10%;
+}
+.Show_Success_MSG, .Show_Wrong_MSG, .Show_Error_MSG {
+	float: left;
+	width: 100%;
+	display: none;
+}
+.Captcha img {
+	float: left;
+	margin-right: 2%;
+}
+.BTN_Width_auto button {
+	width: auto !important;
+}
+.Loading {
+	display: table;
+	width: 100%;
+	margin-top: 10%;
+}
+.Loading img {
+	margin: 0px auto;
+	display: table;
+}
+.Show_Time_Base_Bundle , .Show_Black_Berry_Bundle {
+	display: none;
+}
+.UBD_BTN {
+	float: left;
+	width: 100%;
+	margin-top: 2%;
+}
+.add_Space_Img {
+	width: 100%;
+}
+.Custom_H4_5{
+	float:left;
+	margin:0px;	
+}
+.step_Back > h3{
+	cursor:pointer;
+	text-decoration:underline;	
+}
+.margin_Left_UDB_Buy_Add_Ons_Category{
+	  margin-left: 250px;
+}
+.margin_Left_UDB_Buy_Add_Ons_CategoryMicro{
+	 margin-left: 360px;
+}

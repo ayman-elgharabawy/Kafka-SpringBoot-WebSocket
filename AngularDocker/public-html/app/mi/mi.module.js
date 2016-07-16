@@ -1,7 +1,3 @@
-/**
- * Created by Nada on 21-Mar-2016.
- */
-
 angular.module("app.mi", ['app.common', 'ngStomp'])
     .controller("miController", ['$scope', 'GetJSonMI', 'wsConstant', '$stomp', function ($scope, GetJSonMI, wsConstant, $stomp) {
 

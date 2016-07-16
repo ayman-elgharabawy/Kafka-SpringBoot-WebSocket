@@ -1,7 +1,3 @@
-/**
- * Created by Nada on 17-Apr-2016.
- */
-
 angular.module('app.common', ['webServicesConstant'])
 
     .factory('GetJSonMI',['$http', function ($http){
@@ -40,29 +36,3 @@ angular.module('app.common', ['webServicesConstant'])
     }
 
 }]);
-
-//angular.module('ngservices', ['ngResource','webServicesConstant'])
-//
-//.factory('GetJSonMI', function ($resource) {
-//        return $resource('../MI/json_addons.json', {}, {
-//            query: { method: 'GET' , cache : false},
-//            post: {method:'POST'},
-//            update: {method:'PUT'},
-//            remove: {method:'DELETE'}
-//        })
-//    }
-//)
-//
-//.factory('checkLogin',['$resource',function ($resource) {
-//        return $resource('http://localhost:3000/validData?userid=:id&password=:password',{}, {
-//        //return $resource('http://localhost:3000/validData?',{}, {
-//            query: { method: 'GET' ,
-//                params:{id:'@id', password: '@password'},
-//                cache : false ,isArray: true },
-//
-//            post: {method:'POST'},
-//            update: {method:'PUT'},
-//            remove: {method:'DELETE'}
-//        })
-//    }]
-//);

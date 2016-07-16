@@ -1,8 +1,3 @@
-/**
- * Created by Nada on 17-Apr-2016.
- */
-
-
 angular.module("app.login", ['webServicesConstant', 'app.common'])
     .controller("loginController", ['$scope', 'checkLogin', 'wsConstant', '$state', function ($scope, checkLogin, wsConstant, $state) {
         $scope.user = { MobileNum: '', password: '' };
